@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<html lang = "en">
+	<head>
+		    <meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cadastro de Serviços</title>
+		    <link href="css/bootstrap.css" rel="stylesheet">
+	</head>
+	<body>
+
+<h1><center>Cadastro de Serviços</center></h1>
+
+<div class="container">
+	<div class="row">
+        <div class="span8">
+    		<form action="billing" method="post" class="form-horizontal" id="billingform" accept-charset="utf-8">   
+
+
+     			<div class="form-group">                
+                <div class="control-group">
+                    <label for="servico" class="control-label"> 
+                        Selecione o Serviço:
+                    </label>
+                    <div class="controls">
+                        <select name="servico" id="servico">
+                            <option value=""></option>
+                            <option value="EL">Eletricista</option>
+                            <option value="PE">Pedreiro</option>
+                            <option value="CA">Carpinteiro</option>
+                            <option value="FR">Fretista</option>
+
+                        </select>
+                    </div>
+                </div>
+                        <div class = "control-group 2">
+                        <label for = "price">Preço: </label>
+                        <input type = "text" class= "form-control" id= "price" width = "100px">
+                </div>
+                 <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+    			<div class="form-actions">
+    				<button type="submit" class="btn btn-large btn-primary">Cadastrar o Serviço</button>
+    			</div>
+    		</form>
+    	</div> <!-- .span8 -->
+	</div>
+</div>
+
+
+	</body>
+	</html>
