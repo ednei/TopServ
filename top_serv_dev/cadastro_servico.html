@@ -9,7 +9,6 @@
 	</head>
 	<body>
 
-<h1><center>Cadastro de Serviços</center></h1>
 
 <div class="container">
 	<div class="row">
@@ -19,11 +18,15 @@
 
      			<div class="form-group">                
                 <div class="control-group">
-                    <label for="servico" class="control-label"> 
+                    <div class= "jumbotron">
+                
+                    <h1><center>Cadastro de Serviços</center></h1>
+                    </div>
+                    <label for="service" class="control-label"> 
                         Selecione o Serviço:
                     </label>
                     <div class="controls">
-                        <select name="servico" id="servico">
+                        <select name="service" id="service">
                             <option value=""></option>
                             <option value="EL">Eletricista</option>
                             <option value="PE">Pedreiro</option>
@@ -33,6 +36,8 @@
                         </select>
                     </div>
                 </div>
+            </div>
+
                         <div class = "control-group 2">
                         <label for = "price">Preço: </label>
                         <input type = "text" class= "form-control" id= "price" width = "100px">
@@ -41,6 +46,7 @@
                     </div>
     			<div class="form-actions">
     				<button type="submit" class="btn btn-large btn-primary">Cadastrar o Serviço</button>
+                    <button type="reset" class="btn btn-large btn-primary">Limpar Campos</button>
     			</div>
     		</form>
     	</div> <!-- .span8 -->
