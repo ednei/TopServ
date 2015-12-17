@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-	<html lang = "en">
-	<head>
-		    <meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Cadastro de Serviços</title>
-		    <link href="css/bootstrap.css" rel="stylesheet">
+<html>
+<head>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/sidebar.css" rel="stylesheet">
+		<script src= "js/js_sidebar.js"></script>
 
-	<script>
-	function validateForm(){
-		alert('Cadastro Efetuado com Sucesso.');
-	}
-	</script>
-
-	</head>
+		<meta charset="utf-8">
+		</head>		
 	<body>
-<nav class="navbar navbar-inverse sidebar" role="navigation">
+	<nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
     
 			<div class="navbar-header">
@@ -50,50 +42,20 @@
 	</div>
 </nav>
 
-<div class="container">
-	<div class="row">
-        <div class="span8">
-    		<form onsubmit="validateForm()" action="servico_cadastrado.html" method="post" class="form-horizontal" id="add_service" accept-charset="utf-8">   
-
-
-     			<div class="form-group">                
-                <div class="control-group">
-                    <div class= "jumbotron">
-                
-                    <h1><center>Cadastro de Serviços</center></h1>
-                    </div>
-                    <label for="service" class="control-label"> 
-                        Selecione o Serviço:
-                    </label>
-                    <div class="controls">
-                        <select name="service" id="service" required>
+    		<form action="lista_servicos.html" method="post" class="form-vertical" id="add_user" accept-charset="utf-8">  
+				<div class="controls">
+					<select name="service" id="service">
                             <option value=""></option>
                             <option value="EL">Eletricista</option>
                             <option value="PE">Pedreiro</option>
                             <option value="CA">Carpinteiro</option>
                             <option value="FR">Fretista</option>
-
-                        </select>
-                    </div>
+                    </select>
+					<input type="submit" class="btn btn-primary">
                 </div>
-            </div>
-
-                        
-                        <label for = "price">Preço: </label>
-                        <input type ="text" name= "price" id= "price" required>
-                    </br>
-                <label for ="text"> Descrição: </label>
-                 <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-    			<div class="form-actions">
-    				<button type="submit" class="btn btn-large btn-primary">Cadastrar o Serviço</button>
-                    <button type="reset" class="btn btn-large btn-primary">Limpar Campos</button>
-    			</div>
     		</form>
-    	</div> <!-- .span8 -->
-	</div>
+<div class="main">
+<!-- Content Here -->
 </div>
-
-
 	</body>
-	</html>
+</<html>
