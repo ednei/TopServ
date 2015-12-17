@@ -6,13 +6,18 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		    <link href="css/bootstrap.css" rel="stylesheet">
+	<script>
+	function validateForm(){
+		alert('Cadastro Efetuado com Sucesso.');
+	}
+	</script>
 </head>
 <body>
 <div class="container">
 	<div class="row">
         <div class="span8">
 
-    		<form action="index.php" method="post" class="form-vertical" id="add_user" accept-charset="utf-8">  
+    		<form onsubmit="validateForm()" action="sidebar.html">  
 
     				<div class="form-group">
     					<div class="control-group">
@@ -20,36 +25,36 @@
 				    <center><h1>Cadastro de Clientes</h1></center>
 				    </div>
 				    <label>Nome: </label>
-				    <input type="text" name="firstname" class="span3">
+				    <input type="text" name="firstname" class="span3" required>
 					</br>
 				    <label>Sobrenome: </label>
-				    <input type="text" name="lastname" class="span3">
+				    <input type="text" name="lastname" class="span3" required>
 				    </br>
 				    <label>Email: </label>
-				    <input type="email" name="email" class="span3">
+				    <input type="email" name="email" class="span3" required>
 				    </br>
 				    <label>Endereço: </label>
-				    <input type="text" name="adress" class="span3">
+				    <input type="text" name="adress" class="span3" required>
 				    </br>
 				    <label>Data de Nascimento: </label>
-				    <input type="date" name="born" class="span3">
+				    <input type="date" name="born" class="span3" required>
 				    </br>
 				    <label>CPF: </label>
-				    <input type="text" name="cpf" class="span3">
+				    <input type="text" name="cpf" class="span3" required>
 				    </br>
 				    <label>Numero da Conta: </label>
-				    <input type="text" name="account" class="span3">
+				    <input type="text" name="account" class="span3" required>
 				    </br>
 				    <label>Agencia: </label>
-				    <input type="text" name="agency" class="span3">
+				    <input type="text" name="agency" class="span3" required>
 				    </br>
 				    <label>Senha: </label>
-				    <input type="password" name="password" class="span3">
+				    <input type="password" name="password" class="span3" required>
 				    </br>
 				    <label><input type="checkbox" name="terms"> Eu aceito os <a href="#">Termos e Condições</a>.</label>
 				    	</br>
-				    <input type="submit" value="Cadastrar" class="btn btn-primary ">
-				       <input type="reset" value="Limpar" class="btn btn-primary ">
+				    <input type="submit" value="Cadastrar" class="btn btn-primary">
+				    <input type="reset" value="Limpar" class="btn btn-primary ">
 
 				    <div class="clearfix"></div>
 				    </form>
