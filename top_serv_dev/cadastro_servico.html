@@ -6,6 +6,13 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Cadastro de Serviços</title>
 		    <link href="css/bootstrap.css" rel="stylesheet">
+
+	<script>
+	function validateForm(){
+		alert('Cadastro Efetuado com Sucesso.');
+	}
+	</script>
+
 	</head>
 	<body>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
@@ -46,7 +53,7 @@
 <div class="container">
 	<div class="row">
         <div class="span8">
-    		<form action="servico_cadastrado.html" method="post" class="form-horizontal" id="add_service" accept-charset="utf-8">   
+    		<form onsubmit="validateForm()" action="servico_cadastrado.html" method="post" class="form-horizontal" id="add_service" accept-charset="utf-8">   
 
 
      			<div class="form-group">                
@@ -59,7 +66,7 @@
                         Selecione o Serviço:
                     </label>
                     <div class="controls">
-                        <select name="service" id="service">
+                        <select name="service" id="service" required>
                             <option value=""></option>
                             <option value="EL">Eletricista</option>
                             <option value="PE">Pedreiro</option>
@@ -73,7 +80,7 @@
 
                         
                         <label for = "price">Preço: </label>
-                        <input type ="text" name= "price" id= "price">
+                        <input type ="text" name= "price" id= "price" required>
                     </br>
                 <label for ="text"> Descrição: </label>
                  <textarea class="form-control" rows="5" id="comment"></textarea>
