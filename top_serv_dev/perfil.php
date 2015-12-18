@@ -1,29 +1,6 @@
+
 <html>
 <head>
-
-<?php
-session_start();
-
-class User {
-	public $id;
-    public $name;
-}
-
-$user = new User();
-
-/*
-$user->title = $_POST["firstname"];
-$user-> = $_POST[""];
-$user-> = $_POST[""];
-*/
-
-
-$user->name = $_POST["firstname"];
-
-$_SESSION['user'] = $user;
-
-?>  
-
 	<title>Pesquisar Serviço</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/sidebar.css" rel="stylesheet">
@@ -33,6 +10,32 @@ $_SESSION['user'] = $user;
 		<meta charset="utf-8">
 		</head>		
 	<body>
+	
+<?php
+session_start();
+
+class User {
+	public $id;
+    public $name;
+}
+if (isset($_POST["firstname"])){
+	$user = new User();
+	$user->name = "luizinho";
+	/*
+	$user->title = $_POST["firstname"];
+	$user-> = $_POST[""];
+	$user-> = $_POST[""];
+	*/
+	$_SESSION['user'] = $user;
+}else{
+	echo "hi"
+	if (isset($_SESSION['user'])){
+		$user = $_SESSION['user'];
+	}else{
+		header('Location: cadastro_cliente.html');
+	}
+}
+?>  
 		<div class= "container">
 	<nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
