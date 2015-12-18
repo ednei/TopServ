@@ -54,16 +54,30 @@ $service = new Service();
 
 $service->title = $_POST["service"];
 $service->price = $_POST["price"];
-$service->desc = $_POST["description"];*/
+$service->desc = $_POST["description"];
 
-/*$service->title = "st";
-$service->price = "18.99";
-$service->desc = "sd";*/
-
-if (!isset($services)){
-	$services = array();
+if (!isset($_SESSION['service_id'])){
+	$service_id = 0;
+}else{
+	$service_id = $_SESSION['service_id'];
+	$service_id++;
 }
-$services[0] = $service;
+
+/*
+$service->title = "st";
+$service->price = "18.99";
+$service->desc = "sd";
+*/
+if (!isset($_SESSION['services'])){
+	$services = array();
+}else{
+	$services = $_SESSION['services'];
+}
+
+$services[$service_id] = $service;
+$_SESSION['service_id'] = $service_id;
+$_SESSION['services'] = $services;
+
 ?>
 		<div class="container-fluid">
     			<div class="form-group">
@@ -77,13 +91,15 @@ $services[0] = $service;
 						<th>Preço</th>
 						<th>Descrição</th>		
 					</tr>
-					<tr>
-						<?php
-						echo "<td>".$services[0]->title."</td>";
-						echo "<td>".$services[0]->price."</td>";
-						echo "<td>".$services[0]->desc."</td>";
-						?>		
-					</tr>
+					<?php
+						for ($x=0; $x < count($services); $x++){
+							echo "<tr>";
+							echo "<td>".$services[$x]->title."</td>";
+							echo "<td>".$services[$x]->price."</td>";
+							echo "<td>".$services[$x]->desc."</td>";
+							echo "</tr>";
+						}
+					?>
 					</table>
 					<hr>
 
