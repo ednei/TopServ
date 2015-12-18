@@ -3,6 +3,7 @@
 	<title>Pesquisar Serviço</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/sidebar.css" rel="stylesheet">
+		<link href="css/lateral.css" rel="stylesheet">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
@@ -34,23 +35,24 @@
 		</div>
 	</div>
 </nav>
-			
-					<div class= "jumbotron">
-				    <center><h1>Pesquisar Serviços</h1></center>
+						<div class= "jumbotron">
+				    <center><h1>Perfil</h1></center>
 				    </div>
-
-    		<center><form action="lista_servicos.html" method="post" class="form-vertical" id="add_user" accept-charset="utf-8">  
-				<div class="controls">
-					<select name="service" id="service">
-                            <option value="TD">Todos</option>
-                            <option value="EL">Eletricista</option>
-                            <option value="PE">Pedreiro</option>
-                            <option value="CA">Carpinteiro</option>
-                            <option value="FR">Fretista</option>
-                    </select>
-					<input value="Procurar" type="submit" class="btn btn-primary">
-                </div>
-    		</form> </center>
+	
+			<div id="sidebar-wrapper" class="sidebar-toggle">
+				<ul class="sidebar-nav">
+			    	<li>
+		      		<a href="adicionar_servico.html">Serviços</a>
+		    	</li>
+		    	<li>
+		      		<a href="#item2">Pagamentos</a>
+		    	</li>
+		    	<li>
+		      		<a href="#item3">Editar Perfil</a>
+		    	</li>
+		  	</ul>
+		</div>
+  	</div>
 
 </div>
 </div>
