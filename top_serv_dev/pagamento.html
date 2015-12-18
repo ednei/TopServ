@@ -1,13 +1,14 @@
 <html>
 <head>
+	<title>Pagamentos</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/sidebar.css" rel="stylesheet">
-		<script src= "js/js_sidebar.js"></script>
-
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
 		</head>		
 	<body>
-		<div class="container">
+		<div class= "container">
 	<nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
     
@@ -33,72 +34,36 @@
 		</div>
 	</div>
 </nav>
-<?php
-session_start();
-
-class Service {
-    public $title;
-    public $price;
-	public $desc;
-}
-
-$service = new Service();
-
-$service->title = $_POST["service"];
-$service->price = $_POST["price"];
-$service->desc = $_POST["description"];
-
-if (!isset($_SESSION['service_id'])){
-	$service_id = 0;
-}else{
-	$service_id = $_SESSION['service_id'];
-	$service_id++;
-}
-
-/*
-$service->title = "st";
-$service->price = "18.99";
-$service->desc = "sd";
-*/
-if (!isset($_SESSION['services'])){
-	$services = array();
-}else{
-	$services = $_SESSION['services'];
-}
-
-$services[$service_id] = $service;
-$_SESSION['service_id'] = $service_id;
-$_SESSION['services'] = $services;
-
-?>
-		<div class="container-fluid">
-    			<div class="form-group">
-    					<div class="control-group">
+			
 					<div class= "jumbotron">
-				    <center><h1>Meus serviços cadastrados</h1></center>
+				    <center><h1>Pagamento</h1></center>
 				    </div>
-					<table  style="width:100%">
-					<tr>
-						<th>Tipo</th>
-						<th>Preço</th>
-						<th>Descrição</th>		
-					</tr>
-					<?php
-						for ($x=0; $x < count($services); $x++){
-							echo "<tr>";
-							echo "<td>".$services[$x]->title."</td>";
-							echo "<td>".$services[$x]->price."</td>";
-							echo "<td>".$services[$x]->desc."</td>";
-							echo "</tr>";
-						}
-					?>
-					</table>
-					<hr>
-
-				</div>
-			</div>
-		<div>
-
+				    <h2>Para realizar o Pagamento</h2>
+				    <p>Segue as seguintes informações:</p>
+				    <p>Deposite na Agencia e Conta - Top Serv</p>
+				    <p>E retire seu comprovante no nosso email fornecedido</p>
+					<table class="table">
+				    <thead>
+				      <tr>
+				        <th>Agencia</th>
+				        <th>Conta</th>
+				        <th>Email</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>1234.00 -x</td>
+				        <td>999999999</td>
+				        <td>servicos@topserv.com</td>
+				      </tr>
+				      
+				    </tbody>
+				  </table>
+					<form action="procurar_servico.html">
+					    <input type="submit" value="Voltar" class= "btn btn-primary">
+					</form>
+</div>
 </div>
 	</body>
 </<html>
+
