@@ -43,15 +43,27 @@
 </nav>
 <?php
 session_start();
-$service = $_POST["service"];
-$price = $_POST["price"];
-$description = $_POST["description"];
-if(empty($services)){
+
+class Service {
+    public $title;
+    public $price;
+	public $desc;
+}
+
+$service = new Service();
+
+$service->title = $_POST["service"];
+$service->price = $_POST["price"];
+$service->desc = $_POST["description"];*/
+
+/*$service->title = "st";
+$service->price = "18.99";
+$service->desc = "sd";*/
+
+if (!isset($services)){
 	$services = array();
 }
-else{
-	$services = array_push($services, $service, $price, $description);	
-}
+$services[0] = $service;
 ?>
 		<div class="container-fluid">
     			<div class="form-group">
@@ -67,9 +79,9 @@ else{
 					</tr>
 					<tr>
 						<?php
-						echo "<td>".$services[0][0]."</td>";
-						echo "<td>".$services[0][1]."</td>";
-						echo "<td>".$services[0][2]."</td>";
+						echo "<td>".$services[0]->title."</td>";
+						echo "<td>".$services[0]->price."</td>";
+						echo "<td>".$services[0]->desc."</td>";
 						?>		
 					</tr>
 					</table>
