@@ -67,7 +67,7 @@ $_SESSION['user'] = $user;
 			<div id="sidebar-wrapper" class="sidebar-toggle">
 				<ul class="sidebar-nav">
 			    	<li>
-		      		<a href="adicionar_servico.html">Serviços</a>
+		      		<a href="servico_cadastrado.php">Serviços</a>
 		    	</li>
 		    	<li>
 		      		<a href="#item2">Pagamentos</a>
