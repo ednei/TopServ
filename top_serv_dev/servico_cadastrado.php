@@ -89,6 +89,7 @@ $_SESSION['services'] = $services;
 							echo "<td>".$services[$x]->title."</td>";
 							echo "<td>".$services[$x]->price."</td>";
 							echo "<td>".$services[$x]->desc."</td>";
+							echo "<td><input type=\"submit\" value=\"Contratar\" class=\"btn btn-primary\"></td>";
 							echo "</tr>";
 						}
 					?>
