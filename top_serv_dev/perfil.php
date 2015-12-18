@@ -18,7 +18,7 @@ $user-> = $_POST[""];
 */
 
 
-$user->name = "luizinho";
+$user->name = $_POST["firstname"];
 
 $_SESSION['user'] = $user;
 
