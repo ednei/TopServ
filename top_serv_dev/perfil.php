@@ -27,7 +27,6 @@ if (isset($_POST["firstname"])){
 	*/
 	$_SESSION['user'] = $user;
 }else{
-	echo "hi";
 	if (isset($_SESSION['user'])){
 		$user = $_SESSION['user'];
 	}else{
@@ -53,7 +52,7 @@ if (isset($_POST["firstname"])){
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="procurar_servico.html">Pesquisar<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-search"></span></a></li>
 
-				<li ><a href="perfil.html">Perfil<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+				<li ><a href="perfil.php">Perfil<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 
 
 				<li ><a href="cadastro_cliente.html">Cadastrar-se<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-plus"></span></a></li>
@@ -73,9 +72,6 @@ if (isset($_POST["firstname"])){
 		    	</li>
 		    	<li>
 		      		<a href="#item2">Pagamentos</a>
-		    	</li>
-		    	<li>
-		      		<a href="#item3">Editar Perfil</a>
 		    	</li>
 		  	</ul>
 		</div>
