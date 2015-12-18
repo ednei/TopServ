@@ -20,15 +20,14 @@ class User {
 }
 if (isset($_POST["firstname"])){
 	$user = new User();
-	$user->name = "luizinho";
-	/*
 	$user->title = $_POST["firstname"];
+	/*
 	$user-> = $_POST[""];
 	$user-> = $_POST[""];
 	*/
 	$_SESSION['user'] = $user;
 }else{
-	echo "hi"
+	echo "hi";
 	if (isset($_SESSION['user'])){
 		$user = $_SESSION['user'];
 	}else{

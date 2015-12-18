@@ -98,7 +98,11 @@ $_SESSION['services'] = $services;
 							echo "<td>".$services[$x]->title."</td>";
 							echo "<td>".$services[$x]->price."</td>";
 							echo "<td>".$services[$x]->desc."</td>";
+<<<<<<< HEAD
+
+=======
 							echo "</tr>";
+>>>>>>> ea72311babc5fd4f20df0e32f7a1af751f5bbb67
 						}
 					?>
 					</table>
